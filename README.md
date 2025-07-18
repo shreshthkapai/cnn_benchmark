@@ -24,12 +24,13 @@ A live demo of this project is deployed on Hugging Face Spaces. You can upload a
 
 ```
 cnn-benchmark/
+├── main.py                     # Main experiment pipeline (train, eval, compare)
 ├── data/                        # Downloaded datasets or processed subsets
 ├── models/
 │   ├── custom_cnn.py           # Your custom CNN model
-│   └── resnet18.py             # Pretrained loading + wrapper
-├── train.py                    # Training loop
-├── eval.py                     # Evaluation (acc, cm, metrics)
+│   └── resnet18.py             # ResNet18 model architecture
+├── train.py                    # Core training loop logic
+├── eval.py                     # Evaluation and benchmarking functions
 ├── utils/
 │   ├── data_loader.py          # Custom DataLoader, augmentations
 │   └── visualizations.py       # Confusion matrix, learning curves
@@ -62,17 +63,24 @@ cnn-benchmark/
     pip install -r requirements.txt
     ```
 
-3.  **Train the models:**
-    ```bash
-    python train.py --model custom_cnn  # Train the custom CNN
-python train.py --model resnet18    # Train the ResNet18 model from scratch
-    ```
+4.  **Run Experiments:**
+    The `main.py` script is the primary entry point for training, evaluating, and comparing models.
 
-4.  **Evaluate the models:**
-    ```bash
-    python eval.py --model custom_cnn
-    python eval.py --model resnet18
-    ```
+    *   **To run the full comparison between the Custom CNN and ResNet18 (default):**
+        ```bash
+        python main.py
+        ```
+        This will train both models, evaluate them, save the best checkpoints, and print a comparison summary.
+
+    *   **To run an experiment for a single model (e.g., Custom CNN):**
+        ```bash
+        python main.py --mode single --model custom
+        ```
+
+    *   **To run a hyperparameter sweep (requires W&B setup):**
+        ```bash
+        python main.py --mode sweep --model custom
+        ```
 
 5.  **Launch the Gradio UI (Optional):**
     ```bash
