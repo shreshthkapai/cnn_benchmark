@@ -34,8 +34,8 @@ cnn-benchmark/
 ├── utils/
 │   ├── data_loader.py          # Custom DataLoader, augmentations
 │   └── visualizations.py       # Confusion matrix, learning curves
-├── gradio_ui.py                # Optional Gradio interface
-├── wandb_utils.py              # Optional WandB integration
+├── gradio_ui.py                # Gradio interface
+├── wandb_utils.py              # WandB integration
 ├── requirements.txt
 └── README.md
 ```
@@ -44,7 +44,7 @@ cnn-benchmark/
 
 *   **Framework:** [PyTorch](https://pytorch.org/)
 *   **Data Handling:** [torchvision](https://pytorch.org/vision/stable/index.html)
-*   **Visualization:** [matplotlib](https://matplotlib.org/), [TensorBoard](https://www.tensorflow.org/tensorboard) / [Weights & Biases](https://wandb.ai/)
+*   **Visualization:** [matplotlib](https://matplotlib.org/), [Weights & Biases](https://wandb.ai/)
 *   **UI (Optional):** [Gradio](https://www.gradio.app/)
 
 ## ⚙️ Setup and Usage
