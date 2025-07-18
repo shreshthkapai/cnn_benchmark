@@ -54,7 +54,7 @@ cnn-benchmark/
 
 2.  **Clone the repository:**
     ```bash
-    git clone <your-repo-link>
+    git clone https://github.com/shreshthkapai/cnn_benchmark.git
     cd cnn-benchmark
     ```
 
