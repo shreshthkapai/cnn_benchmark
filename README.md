@@ -127,7 +127,3 @@ weighted avg      0.849     0.849     0.849     10000
 *   [ ] Implement more complex custom architectures.
 *   [ ] Explore different hyperparameter tuning strategies.
 *   [ ] Optimize the models for deployment (e.g., quantization, pruning).
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
